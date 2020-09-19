@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetch API Sanbox</title>
+</head>
+
+<body>
+    <div id="output"></div>
+    <button id="getText">Get Text</button>
+    <script>
+        document.getElementById('getText').addEventListener('click', getText);
+
+function getText(){
+fetch('sample.txt')
+.then(res => res.text())
+.then((data) => {
+    document.getElementById('output').innerHTML = data;
+})
+}
+    </script>
+</body>
+</html>
